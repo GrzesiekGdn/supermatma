@@ -1,0 +1,15 @@
+th{ text-align: center;}
+td{ text-align: right;}
+
+.btn {
+  width: 100% !important;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+#wynik{
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter',
+    'Lucida Typewriter', monospace;
+  font-size: 200%;
+  font-weight: bold;
+}

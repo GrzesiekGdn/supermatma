@@ -1,37 +1,64 @@
-$('button').click(function(){
-	var commandText = $(this).html();
+$('.polecenie').click(function(){
+	var tekstPolecenia = $(this).text();
+	var aktualnyTekst = $('#wynik').text();
 
-	if(commandText === "C"){
-		$("#wynik").text("0");
-		return;
-	}
-
-	var currentText = $('#wynik').text();
-
-	if(commandText === "=") {
-		try {
-			var result = eval(currentText);
-		} catch(err) {
-			result = err.message;
-		}
-
-		$("#wynik").text(result);
-		return;
-	}
-
-	if(commandText === "CE"){
-		if(!currentText || currentText.length === 1) {
-			currentText = "0";
-		} else {
-			currentText = currentText.substring(0, currentText.length - 1);
-		}
+	if(aktualnyTekst === "0") {
+		aktualnyTekst = tekstPolecenia;
 	} else {
-		if(currentText === "0") {
-			currentText = commandText;
-		} else {
-			currentText += commandText;
-		}	
+		aktualnyTekst += tekstPolecenia;
 	}
 
-	$('#wynik').text(currentText);
+	$('#wynik').text(aktualnyTekst);
 });
+
+$('#przyciskCzysc').click(function(){
+	$("#wynik").text("0");
+});
+
+$('#przyciskCofnij').click(function(){
+	var aktualnyTekst = $('#wynik').text();
+
+	if(!aktualnyTekst || aktualnyTekst.length === 1) {
+		aktualnyTekst = "0";
+	} else {
+		aktualnyTekst = aktualnyTekst.substring(0, aktualnyTekst.length - 1);
+	}
+
+	$('#wynik').text(aktualnyTekst);
+});
+
+$('#przecinek').click(function(){
+		var aktualnyTekst = $('#wynik').text();
+		var wyrazenie = /,\d*$/m;
+		var jestPrzecinek = wyrazenie.test(aktualnyTekst);
+
+		if(!jestPrzecinek){
+			$('#wynik').text(aktualnyTekst + ",");
+		}
+});
+
+$('#przyciskRownaSie').click(function(){
+	var aktualnyTekst = $('#wynik').text();
+
+	aktualnyTekst = zamienWszystkie(aktualnyTekst, '%', '/100');
+	aktualnyTekst = zamienWszystkie(aktualnyTekst, ',', '.');
+	aktualnyTekst = zamienPotegowanie(aktualnyTekst);
+
+	try {
+		var wynik = eval(aktualnyTekst);
+		wynik = wynik.toString().replace('.', ',');
+	} catch(err) {
+		wynik = err.message;
+	}
+
+	$("#wynik").text(wynik);
+});
+
+function zamienPotegowanie(tekst){
+	var wyrazenie = /([\d\.]+)\^([\d\.]+)/g;
+	return tekst.replace(wyrazenie, "Math.pow($1,$2)");
+}
+
+function zamienWszystkie(tekst, co, naCo){
+	return tekst.split(co).join(naCo);
+}

@@ -8,6 +8,7 @@
 <body>
  <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="site.css">
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -15,13 +16,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-<style>
-	th{ text-align: center;}
-	td{ text-align: right;}
-	.btn{width: 100%;}
-</style>
-
-<div class="container-fluid">
+<div class="container">
 <div class="row">
 
 <h1>Witajcie w naszej bajce nauki matematyki!</h1>
@@ -91,43 +86,42 @@
 </div>
 <div class="col-sm-4">
 <h3>Kalkulator</h3>
-<p>Prawie działa.</p>
 <table class="table">
 	<tbody>
 		<tr><td colspan="4" style="background: #58ACFA;">
 			<p id="wynik" />0</p></td></tr>
 		<tr>
-			<td><button class="btn">C</button></td>
-			<td><button class="btn">CE</button></td>
-			<td><button class="btn">%</button></td>
-			<td><button class="btn">^</button></td>
+			<td><button id="przyciskCzysc" type="button" class="btn btn-danger">C</button></td>
+			<td><button id="przyciskCofnij" class="btn btn-warning">CE</button></td>
+			<td><button class="btn btn-info polecenie">%</button></td>
+			<td><button class="btn btn-info polecenie">^</button></td>
 		</tr>
 		<tr>
-			<td><button class="btn">7</button></td>
-			<td><button class="btn">8</button></td>
-			<td><button class="btn">9</button></td>
-			<td><button class="btn">+</button></td>
+			<td><button class="btn polecenie">7</button></td>
+			<td><button class="btn polecenie">8</button></td>
+			<td><button class="btn polecenie">9</button></td>
+			<td><button class="btn btn-info polecenie">+</button></td>
 		</tr>
 		<tr>
-			<td><button class="btn">4</button></td>
-			<td><button class="btn">5</button></td>
-			<td><button class="btn">6</button></td>
-			<td><button class="btn">-</button></td>
+			<td><button class="btn polecenie">4</button></td>
+			<td><button class="btn polecenie">5</button></td>
+			<td><button class="btn polecenie">6</button></td>
+			<td><button class="btn btn-info polecenie">-</button></td>
 		</tr>
 		<tr>
-			<td><button class="btn">1</button></td>
-			<td><button class="btn">2</button></td>
-			<td><button class="btn">3</button></td>
-			<td><button class="btn">*</button></td>
+			<td><button class="btn polecenie">1</button></td>
+			<td><button class="btn polecenie">2</button></td>
+			<td><button class="btn polecenie">3</button></td>
+			<td><button class="btn btn-info polecenie">*</button></td>
 		</tr>
 		<tr>
-			<td><button class="btn">,</button></td>
-			<td colspan="2"><button class="btn">0</button></td>
-			<td><button class="btn">/</button></td>
+			<td><button id="przecinek" class="btn">,</button></td>
+			<td colspan="2"><button class="btn polecenie">0</button></td>
+			<td><button class="btn btn-info polecenie">/</button></td>
 		</tr>
 		<tr>
-			<td colspan="4"><button class="btn">=</button></td>
-		</tr>			
+			<td colspan="4"><button id="przyciskRownaSie" class="btn btn-primary">=</button></td>
+		</tr>
 	</tbody>
 </table>
 </div>
