@@ -1,10 +1,29 @@
+$('.cyfra').click(function(){
+	var cyfra = $(this).text();
+	var aktualnyTekst = $('#wynik').text();
+
+	if(aktualnyTekst === "0") {
+		aktualnyTekst = cyfra;
+	} else {
+		aktualnyTekst += cyfra;
+	}
+
+	$('#wynik').text(aktualnyTekst);
+});
+
 $('.polecenie').click(function(){
 	var tekstPolecenia = $(this).text();
 	var aktualnyTekst = $('#wynik').text();
 
-	if(aktualnyTekst === "0") {
-		aktualnyTekst = tekstPolecenia;
+	if(aktualnyTekst === "0" && tekstPolecenia === "-") {
+		aktualnyTekst = "-";
 	} else {
+		var wyrazenie = /[\d,]+$/m;
+		var jestLiczba = wyrazenie.test(aktualnyTekst);
+
+		if(!jestLiczba) {
+			aktualnyTekst = aktualnyTekst.slice(0, -1);
+		}
 		aktualnyTekst += tekstPolecenia;
 	}
 
@@ -55,7 +74,7 @@ $('#przyciskRownaSie').click(function(){
 });
 
 function zamienPotegowanie(tekst){
-	var wyrazenie = /([\d\.]+)\^([\d\.]+)/g;
+	var wyrazenie = /(-?[\d\.]+)\^(-?[\d\.]+)/g;
 	return tekst.replace(wyrazenie, "Math.pow($1,$2)");
 }
 
