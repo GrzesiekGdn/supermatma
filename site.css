@@ -1,5 +1,18 @@
-th{ text-align: center;}
-td{ text-align: right;}
+html, body {
+  min-height: 100%
+}
+
+.container {
+  height: 90%;
+}
+
+body { background: #58ACFA; }
+th { text-align: center;}
+td { text-align: center;}
+
+table.table-bordered {
+    border: solid orange 5px;
+}
 
 .btn {
   width: 100% !important;
