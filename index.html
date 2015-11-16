@@ -21,171 +21,169 @@
 		<div class="col-xs-3 col-sm-2 display-cell">
 		<img src="favicon.png" alt="Nasze logo"	style="width: 100%;"></img>
 	</div>
-
 		<div class="col-xs-9 col-sm-10 display-cell">
 			<h1>Witajcie w naszej bajce nauki matematyki!</h1>
 			<p class="well">Strona Piotra i Pawła z klasy 2A oraz Marty z klasy 5C SP 80 w Warszawie</p>
 		</div>
 	</div>
-<div class="row">
 
-<div class="col-sm-4 col-lg-3">
-<h3>Kalkulator</h3>
-<table class="table">
-	<tbody>
-		<tr><td colspan="4" style="background: #58ACFA;">
-			<p id="wynik" />0</p></td>
-		</tr>
-		<tr><td colspan="4" style="background: #FFAAAA;">
-			<p id="blad" />0</p></td>
-		</tr>
-		<tr>
-			<td><button id="przyciskCzysc" type="button" class="btn btn-danger">C</button></td>
-			<td><button id="przyciskCofnij" class="btn btn-warning">CE</button></td>
-			<td><button class="btn btn-info polecenie">%</button></td>
-			<td><button class="btn btn-info polecenie">^</button></td>
-		</tr>
-		<tr>
-			<td><button class="btn cyfra">7</button></td>
-			<td><button class="btn cyfra">8</button></td>
-			<td><button class="btn cyfra">9</button></td>
-			<td><button class="btn btn-info polecenie">+</button></td>
-		</tr>
-		<tr>
-			<td><button class="btn cyfra">4</button></td>
-			<td><button class="btn cyfra">5</button></td>
-			<td><button class="btn cyfra">6</button></td>
-			<td><button class="btn btn-info polecenie">-</button></td>
-		</tr>
-		<tr>
-			<td><button class="btn cyfra">1</button></td>
-			<td><button class="btn cyfra">2</button></td>
-			<td><button class="btn cyfra">3</button></td>
-			<td><button class="btn btn-info polecenie">*</button></td>
-		</tr>
-		<tr>
-			<td><button id="przecinek" class="btn">,</button></td>
-			<td colspan="2"><button class="btn cyfra">0</button></td>
-			<td><button class="btn btn-info polecenie">/</button></td>
-		</tr>
-		<tr>
-			<td colspan="4"><button id="przyciskRownaSie" class="btn btn-primary">=</button></td>
-		</tr>
-	</tbody>
-</table>
-</div>
+			<div class="row">
+			<div class="col-sm-4 col-lg-3">
+			<h3>Kalkulator</h3>
+			<table class="table">
+				<tbody>
+					<tr><td colspan="4" style="background: #58ACFA;">
+						<p id="wynik" />0</p></td>
+					</tr>
+					<tr><td colspan="4">
+						<p id="blad" style="background: #FFAAAA;" /></p></td>
+					</tr>
+					<tr>
+						<td><button id="przyciskCzysc" type="button" class="btn btn-danger">C</button></td>
+						<td><button id="przyciskCofnij" class="btn btn-warning">CE</button></td>
+						<td><button class="btn btn-info polecenie">%</button></td>
+						<td><button class="btn btn-info polecenie">^</button></td>
+					</tr>
+					<tr>
+						<td><button class="btn cyfra">7</button></td>
+						<td><button class="btn cyfra">8</button></td>
+						<td><button class="btn cyfra">9</button></td>
+						<td><button class="btn btn-info polecenie">+</button></td>
+					</tr>
+					<tr>
+						<td><button class="btn cyfra">4</button></td>
+						<td><button class="btn cyfra">5</button></td>
+						<td><button class="btn cyfra">6</button></td>
+						<td><button class="btn btn-info polecenie">-</button></td>
+					</tr>
+					<tr>
+						<td><button class="btn cyfra">1</button></td>
+						<td><button class="btn cyfra">2</button></td>
+						<td><button class="btn cyfra">3</button></td>
+						<td><button class="btn btn-info polecenie">*</button></td>
+					</tr>
+					<tr>
+						<td><button id="przecinek" class="btn">,</button></td>
+						<td colspan="2"><button class="btn cyfra">0</button></td>
+						<td><button class="btn btn-info polecenie">/</button></td>
+					</tr>
+					<tr>
+						<td colspan="4"><button id="przyciskRownaSie" class="btn btn-primary">=</button></td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
 
-<div class="col-sm-8  col-lg-4">
-<h3>Tabliczka mnożenia do 10</h3>
-<table class="table table-bordered table-hover">
-	<thead>
-		<tr class="info">
-			<th>*</th>
-			<th>1</th>
-			<th>2</th>
-			<th>3</th>
-			<th>4</th>
-			<th>5</th>
-			<th>6</th>
-			<th>7</th>
-			<th>8</th>
-			<th>9</th>
-			<th>10</th>
-		</tr>
-	</thead>
-		<tr><th class="info">1</th>
-			<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
-			<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
-		</tr>
-		<tr><th class="info">2</th>
-			<td>2</td><td>4</td><td>6</td><td>8</td><td>10</td>
-			<td>12</td><td>14</td><td>16</td><td>18</td><td>20</td>
-		</tr>
-		<tr><th class="info">3</th>
-			<td>3</td><td>6</td><td>9</td><td>12</td><td>15</td>
-			<td>18</td><td>21</td><td>24</td><td>27</td><td>30</td>
-		</tr>
-		<tr><th class="info">4</th>
-			<td>4</td><td>8</td><td>12</td><td>16</td><td>20</td>
-			<td>24</td><td>28</td><td>32</td><td>36</td><td>40</td>
-		</tr>
-		<tr><th class="info">5</th>
-			<td>5</td><td>10</td><td>15</td><td>20</td><td>25</td>
-			<td>30</td><td>35</td><td>40</td><td>45</td><td>50</td>
-		</tr>
-		<tr><th class="info">6</th>
-			<td>6</td><td>12</td><td>18</td><td>24</td><td>30</td>
-			<td>36</td><td>42</td><td>48</td><td>54</td><td>60</td>
-		</tr>
-		<tr><th class="info">7</th>
-			<td>7</td><td>14</td><td>21</td><td>28</td><td>35</td>
-			<td>42</td><td>49</td><td>56</td><td>63</td><td>70</td>
-		</tr>
-		<tr><th class="info">8</th>
-			<td>8</td><td>16</td><td>24</td><td>32</td><td>40</td>
-			<td>48</td><td>56</td><td>64</td><td>72</td><td>80</td>
-		</tr>
-		<tr><th class="info">9</th>
-			<td>9</td><td>18</td><td>27</td><td>36</td><td>45</td>
-			<td>54</td><td>63</td><td>72</td><td>81</td><td>90</td>
-		</tr>
-		<tr><th class="info">10</th>
-			<td>10</td><td>20</td><td>30</td><td>40</td><td>50</td>
-			<td>60</td><td>70</td><td>80</td><td>90</td><td>100</td>
-		</tr>
-	</tbody>
-</table>
-</div>
+			<div class="col-sm-8  col-lg-4">
+			<h3>Tabliczka mnożenia do 10</h3>
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr class="info">
+						<th>*</th>
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+						<th>5</th>
+						<th>6</th>
+						<th>7</th>
+						<th>8</th>
+						<th>9</th>
+						<th>10</th>
+					</tr>
+				</thead>
+					<tr><th class="info">1</th>
+						<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+						<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+					</tr>
+					<tr><th class="info">2</th>
+						<td>2</td><td>4</td><td>6</td><td>8</td><td>10</td>
+						<td>12</td><td>14</td><td>16</td><td>18</td><td>20</td>
+					</tr>
+					<tr><th class="info">3</th>
+						<td>3</td><td>6</td><td>9</td><td>12</td><td>15</td>
+						<td>18</td><td>21</td><td>24</td><td>27</td><td>30</td>
+					</tr>
+					<tr><th class="info">4</th>
+						<td>4</td><td>8</td><td>12</td><td>16</td><td>20</td>
+						<td>24</td><td>28</td><td>32</td><td>36</td><td>40</td>
+					</tr>
+					<tr><th class="info">5</th>
+						<td>5</td><td>10</td><td>15</td><td>20</td><td>25</td>
+						<td>30</td><td>35</td><td>40</td><td>45</td><td>50</td>
+					</tr>
+					<tr><th class="info">6</th>
+						<td>6</td><td>12</td><td>18</td><td>24</td><td>30</td>
+						<td>36</td><td>42</td><td>48</td><td>54</td><td>60</td>
+					</tr>
+					<tr><th class="info">7</th>
+						<td>7</td><td>14</td><td>21</td><td>28</td><td>35</td>
+						<td>42</td><td>49</td><td>56</td><td>63</td><td>70</td>
+					</tr>
+					<tr><th class="info">8</th>
+						<td>8</td><td>16</td><td>24</td><td>32</td><td>40</td>
+						<td>48</td><td>56</td><td>64</td><td>72</td><td>80</td>
+					</tr>
+					<tr><th class="info">9</th>
+						<td>9</td><td>18</td><td>27</td><td>36</td><td>45</td>
+						<td>54</td><td>63</td><td>72</td><td>81</td><td>90</td>
+					</tr>
+					<tr><th class="info">10</th>
+						<td>10</td><td>20</td><td>30</td><td>40</td><td>50</td>
+						<td>60</td><td>70</td><td>80</td><td>90</td><td>100</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
 
-<div class="col-sm-4 col-lg-2">
-<h3>Przeliczniki miar</h3>
-<table class="table table-bordered table-hover" >
-	<tbody>
-		<tr>
-			<th class="info">1 km</th>
-			<th>1000 m</th>
-		</tr>
-		<tr>
-			<th>1 m</th>
-			<th class="info">100 cm</th>
-		</tr>
-		<tr>
-			<th class="info">1 m</th>
-			<th>10 dm</th>
-		</tr>
-		<tr>
-			<th>1 dm</th>
-			<th class="info">10 cm</th>
-		</tr>
-	</tbody>
-</table>
-</div>
+			<div class="col-sm-4 col-lg-2">
+			<h3>Przeliczniki miar</h3>
+			<table class="table table-bordered table-hover" >
+				<tbody>
+					<tr>
+						<th class="info">1 km</th>
+						<th>1000 m</th>
+					</tr>
+					<tr>
+						<th>1 m</th>
+						<th class="info">100 cm</th>
+					</tr>
+					<tr>
+						<th class="info">1 m</th>
+						<th>10 dm</th>
+					</tr>
+					<tr>
+						<th>1 dm</th>
+						<th class="info">10 cm</th>
+					</tr>
+				</tbody>
+			</table>
+			</div>
 
-<div class="col-sm-4 col-lg-2">
-<h3>Przeliczniki masy</h3>
-<table class="table table-bordered table-hover" >
-	<tbody>
-		<tr>
-			<th class="info">1 t</th>
-			<th>1000 kg</th>
-		</tr>
-		<tr>
-			<th>1 kg</th>
-			<th class="info">100 dag</th>
-		</tr>
-		<tr>
-			<th class="info">1 kg</th>
-			<th>1000 g</th>
-		</tr>
-		<tr>
-			<th>1 dkg</th>
-			<th class="info">10 cm</th>
-		</tr>
-	</tbody>
-</table>
-</div>
-
-</div>
+			<div class="col-sm-4 col-lg-2">
+			<h3>Przeliczniki masy</h3>
+			<table class="table table-bordered table-hover" >
+				<tbody>
+					<tr>
+						<th class="info">1 t</th>
+						<th>1000 kg</th>
+					</tr>
+					<tr>
+						<th>1 kg</th>
+						<th class="info">100 dag</th>
+					</tr>
+					<tr>
+						<th class="info">1 kg</th>
+						<th>1000 g</th>
+					</tr>
+					<tr>
+						<th>1 dkg</th>
+						<th class="info">10 cm</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
 
 <footer class="small text-center">

@@ -72,7 +72,7 @@ $('#przyciskRownaSie').click(function(){
 		wynik = wynik.toString().replace('.', ',');
 		$("#wynik").text(wynik);
 	} catch(err) {
-		$("#blad").text(err.message);
+		$("#blad").text('Błąd: "' + err.message + '"');
 	}
 });
 
