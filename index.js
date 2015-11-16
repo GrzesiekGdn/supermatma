@@ -1,3 +1,7 @@
+$('.btn').click(function(){
+	$("#blad").text('');
+});
+
 $('.cyfra').click(function(){
 	var cyfra = $(this).text();
 	var aktualnyTekst = $('#wynik').text();
@@ -66,11 +70,10 @@ $('#przyciskRownaSie').click(function(){
 	try {
 		var wynik = eval(aktualnyTekst);
 		wynik = wynik.toString().replace('.', ',');
+		$("#wynik").text(wynik);
 	} catch(err) {
-		wynik = err.message;
+		$("#blad").text(err.message);
 	}
-
-	$("#wynik").text(wynik);
 });
 
 function zamienPotegowanie(tekst){
