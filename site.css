@@ -6,9 +6,20 @@ html, body {
   height: 90%;
 }
 
+.display-table{
+    display: table;
+    table-layout: fixed;
+}
+
+.display-cell{
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+}
+
 body { background: #58ACFA; }
-th { text-align: center;}
-td { text-align: center;}
+th { text-align: center; }
+td { text-align: center; }
 
 table.table-bordered {
     border: solid orange 5px;
@@ -25,4 +36,5 @@ table.table-bordered {
     'Lucida Typewriter', monospace;
   font-size: 200%;
   font-weight: bold;
+  text-align: right;
 }

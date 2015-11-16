@@ -44,7 +44,7 @@ $('#przyciskCofnij').click(function(){
 	if(!aktualnyTekst || aktualnyTekst.length === 1) {
 		aktualnyTekst = "0";
 	} else {
-		aktualnyTekst = aktualnyTekst.substring(0, aktualnyTekst.length - 1);
+		aktualnyTekst = aktualnyTekst.slice(0, -1);
 	}
 
 	$('#wynik').text(aktualnyTekst);
