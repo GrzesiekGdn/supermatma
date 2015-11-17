@@ -1,5 +1,6 @@
 $('.btn').click(function(){
 	$("#blad").text('');
+	$("#formula").text('');
 });
 
 $('.cyfra').click(function(){
@@ -63,12 +64,14 @@ $('#przecinek').click(function(){
 $('#przyciskRownaSie').click(function(){
 	var aktualnyTekst = $('#wynik').text();
 
-	aktualnyTekst = zamienWszystkie(aktualnyTekst, '%', '/100');
-	aktualnyTekst = zamienWszystkie(aktualnyTekst, ',', '.');
-	aktualnyTekst = zamienPotegowanie(aktualnyTekst);
+	var formulaJs = zamienWszystkie(aktualnyTekst, '%', '/100');
+	formulaJs = zamienWszystkie(formulaJs, ',', '.');
+	formulaJs = zamienPotegowanie(formulaJs);
 
 	try {
-		var wynik = eval(aktualnyTekst);
+		var wynik = eval(formulaJs);
+		$("#formula").text(aktualnyTekst + '=');
+
 		wynik = wynik.toString().replace('.', ',');
 		$("#wynik").text(wynik);
 	} catch(err) {
